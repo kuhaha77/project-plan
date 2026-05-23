@@ -385,6 +385,7 @@
 .construction-date {
   font-weight: 700;
   white-space: nowrap;
+  color: #000000 !important;
 }
 
 .actions-cell {

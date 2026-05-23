@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Project, BusinessType } from '../types';
 import { MilestoneCellView } from './MilestoneCellView';
-import { businessTypeColor, isOverdue, isUpcoming } from '../utils';
+import { businessTypeColor } from '../utils';
 import { Pencil, Trash2 } from 'lucide-react';
 
 interface Props {
@@ -49,8 +49,6 @@ export const ProjectTable: React.FC<Props> = ({
         </thead>
         <tbody>
           {projects.map((project) => {
-            const startOverdue = isOverdue(project.constructionStart);
-            const startUpcoming = isUpcoming(project.constructionStart, 60);
             return (
               <tr
                 key={project.id}
@@ -80,13 +78,7 @@ export const ProjectTable: React.FC<Props> = ({
                 <td><MilestoneCellView cell={project.bizApproval} /></td>
                 <td><MilestoneCellView cell={project.designShare} /></td>
                 <td>
-                  <span
-                    className={[
-                      'construction-date',
-                      startOverdue ? 'cell-overdue' : '',
-                      startUpcoming ? 'cell-upcoming' : '',
-                    ].filter(Boolean).join(' ')}
-                  >
+                  <span className="construction-date" style={{ color: '#000000' }}>
                     {project.constructionStart}
                   </span>
                 </td>
