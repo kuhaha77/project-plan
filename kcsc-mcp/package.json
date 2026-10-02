@@ -1,0 +1,24 @@
+{
+  "name": "kcsc-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "국가건설기준센터(KCSC) 설계기준(KDS)·표준시방서(KCS) 조회 원격 MCP 서버 — Cloudflare Workers",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "node-html-parser": "^9.0.4",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261002.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3",
+    "wrangler": "^4.146.0"
+  }
+}

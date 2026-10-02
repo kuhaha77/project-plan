@@ -1,0 +1,2 @@
+KCSC_API_KEY=발급받은_KCSC_OpenAPI_인증키
+MCP_ACCESS_TOKEN=openssl_rand_hex_32_로_만든_긴_임의_문자열

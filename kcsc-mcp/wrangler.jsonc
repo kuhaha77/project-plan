@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kcsc-mcp",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true }
+  // 캐시(선택): `npx wrangler kv namespace create KCSC_CACHE` 후 아래 주석을 풀고 id 를 채운다.
+  // , "kv_namespaces": [{ "binding": "KCSC_CACHE", "id": "<KV_NAMESPACE_ID>" }]
+}
