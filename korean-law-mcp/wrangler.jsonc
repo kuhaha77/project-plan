@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "korean-law-mcp",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+
+  // korean-law-mcp 를 Cloudflare Containers 로 띄운다(Workers Paid 플랜 필요).
+  // 배포 때 wrangler 가 로컬 Docker 로 이미지를 빌드해 Cloudflare 레지스트리에 올린다.
+  "containers": [
+    {
+      "class_name": "LawContainer",
+      "image": "./Dockerfile",
+      "instance_type": "basic",
+      "max_instances": 2
+    }
+  ],
+  "durable_objects": {
+    "bindings": [{ "class_name": "LawContainer", "name": "LAW_CONTAINER" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["LawContainer"] }]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "naver-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "네이버 검색(뉴스·블로그·카페·웹문서)·데이터랩 검색어 트렌드 원격 MCP 서버 — Cloudflare Workers",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261013.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.4",
+    "wrangler": "^4.149.0"
+  }
+}

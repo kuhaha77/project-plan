@@ -1,0 +1,3 @@
+NAVER_CLIENT_ID=네이버_개발자센터_Client_ID
+NAVER_CLIENT_SECRET=네이버_개발자센터_Client_Secret
+MCP_ACCESS_TOKEN=openssl_rand_hex_32_로_만든_긴_임의_문자열

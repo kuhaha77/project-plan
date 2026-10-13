@@ -1,0 +1,22 @@
+{
+  "name": "korean-law-mcp-host",
+  "version": "0.1.0",
+  "private": true,
+  "description": "korean-law-mcp(MIT, chrisryugj) 자체 호스팅 — Cloudflare Workers + Containers, claude.ai 커넥터용 경로 토큰 인증",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@cloudflare/containers": "^0.3.7"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261013.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.4",
+    "wrangler": "^4.149.0"
+  }
+}
